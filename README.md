@@ -34,3 +34,13 @@ To test the game and run a local server on your machine:
 4. **Navigate to the folder** where you saved the game:
    ```bash
    cd C:\path\to\your\folder\jellygo
+5. **Start the server by running:**
+   ```bash
+   node server.js
+
+6. **Launch the game: Open your web browser and go to**
+   ```bash
+   http://localhost:3000/.
+7. **Simulate Multiplayer:**
+To test multiplayer mechanics by yourself, simply open http://localhost:3000/ in multiple separate browser windows or tabs. Each window will connect as a brand-new player!
+
