@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelly Go</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- UI Overlay for Menus -->
+    <div id="ui-layer">
+        
+        <!-- Main Menu -->
+        <div id="main-menu" class="menu-box">
+            <h1>JELLY GO</h1>
+            <input type="text" id="username" placeholder="Enter Username..." maxlength="15">
+            
+            <div class="menu-actions">
+                <button id="btn-test-map" class="btn-primary">Play Test Map (Local)</button>
+                <hr>
+                <input type="text" id="custom-map-code" placeholder="Paste Map Code Here (Optional)" style="font-size: 12px; padding: 8px;">
+                <button id="btn-create-game" class="btn-secondary">Create Private Game</button>
+                <button id="btn-open-editor" class="btn-primary" style="background: #8e44ad; margin-top: 10px;">🛠️ Open Map Editor</button>
+                <div class="join-box">
+                    <input type="text" id="room-code-input" placeholder="Room Code" maxlength="5">
+                    <button id="btn-join-private" class="btn-secondary">Join</button>
+                </div>
+            </div>
+            <p id="error-msg" class="error"></p>
+        </div>
+
+        <!-- Lobby Menu -->
+        <div id="lobby-menu" class="menu-box" style="display: none;">
+            <h2>Room: <span id="lobby-room-code" class="highlight"></span></h2>
+            <div class="player-list-container">
+                <h3>Players</h3>
+                <ul id="player-list"></ul>
+            </div>
+            <button id="btn-start-game" class="btn-primary" style="display: none;">Start Game</button>
+            <p id="waiting-msg">Waiting for host to start...</p>
+        </div>
+
+    </div>
+
+    <!-- The Game Canvas (Hidden by default) -->
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+
+    <!-- Editor Tools Panel (Hidden by default) -->
+<div id="editor-ui" style="display: none;">
+    <h3>Map Editor</h3>
+    <button id="btn-undo-editor" class="btn-secondary" style="background: #e67e22; margin-bottom: 10px;">↩️ Undo</button>
+    <button id="btn-redo-editor" class="btn-secondary" style="background: #27ae60; margin-bottom: 10px;">↪️ Redo</button>
+    <button id="btn-export-map" class="btn-primary">💾 Export Map Code</button>
+    <button id="btn-exit-editor" class="btn-secondary" style="background: #c0392b;">❌ Exit Editor</button>
+</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
