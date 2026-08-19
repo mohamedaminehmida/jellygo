@@ -30,6 +30,9 @@ To test the game and run a local server on your machine:
 
 1. **Install Node.js** (if you haven't already).
 2. **Download or Clone** this repository to your computer.
+   ```bash
+   JellyGo vX.X.zip
+
 3. **Open your Command Prompt (cmd)** or terminal.
 4. **Navigate to the folder** where you saved the game:
    ```bash
